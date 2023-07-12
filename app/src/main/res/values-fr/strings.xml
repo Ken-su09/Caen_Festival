@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Festival de Caen</string>
+
+    <string name="nav_home">Accueil</string>
+    <string name="nav_program">Programme</string>
+    <string name="nav_show">Mon festival</string>
+    <string name="nav_tickets">Mes billets</string>
+    <string name="nav_venues">Lieux</string>
+
+    <string name="box_office_and_prices">Billeterie et tarifs</string>
+    <string name="prepare_your_trip">Préparez votre venue</string>
+    <string name="moving_during_the_festival">Se déplacer pendant le Festival</string>
+    <string name="q_and_a">FAQ</string>
+    <string name="more_title">Plus</string>
+    <string name="parameters">Paramètres</string>
+    <string name="switch_language_text">Switch language : English</string>
+    <string name="my_account_text">Mon compte</string>
+    <string name="useful_information_title">Informations pratiques</string>
+    <string name="venues_edition_title">Lieux de l\'édition</string>
+</resources>

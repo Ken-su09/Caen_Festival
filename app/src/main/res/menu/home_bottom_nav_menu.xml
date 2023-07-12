@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_program"
+            android:icon="@drawable/ic_program"
+            android:title="@string/nav_program" />
+        <item
+            android:id="@+id/nav_show"
+            android:icon="@drawable/ic_festival"
+            android:title="@string/nav_show" />
+        <item
+            android:id="@+id/nav_tickets"
+            android:icon="@drawable/ic_tickets"
+            android:title="@string/nav_tickets" />
+        <item
+            android:id="@+id/nav_venues"
+            android:icon="@drawable/ic_places"
+            android:title="@string/nav_venues" />
+    </group>
+</menu>

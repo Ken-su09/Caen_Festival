@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Caen_Festival</string>
+    <string name="app_name">Caen Festival</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_program">Program</string>
+    <string name="nav_show">My show</string>
+    <string name="nav_tickets">My tickets</string>
+    <string name="nav_venues">Venues</string>
+
+    <string name="box_office_and_prices">Box office and prices</string>
+    <string name="prepare_your_trip">Prepare your trip</string>
+    <string name="moving_during_the_festival">Moving during the Festival</string>
+    <string name="q_and_a">Q&amp;A</string>
+    <string name="more_title">More</string>
+    <string name="parameters">Parameters</string>
+    <string name="switch_language_text">Changer de langue : Francais</string>
+    <string name="my_account_text">My account</string>
+    <string name="useful_information_title">Useful information</string>
+    <string name="venues_edition_title">The venues of the edition</string>
 </resources>

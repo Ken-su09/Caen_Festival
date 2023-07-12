@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.prepare_your_trip.PrepareYourTripFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#e10f14"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_custom_back_arrow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="30dp"
+            android:layout_height="0.8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toStartOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Préparez votre venue"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/view_2"
+            app:layout_constraintStart_toEndOf="@+id/view_1"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="30dp"
+            android:layout_height="0.8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/title"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/access_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:srcCompat="@drawable/access" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="L’accès au territoire de Caen la mer est facilité par des infrastructures de transports à la fois diversifié et de qualité. Liaisons aériennes, maritimes, routières ou ferroviaires : tous les chemins mènent à Caen."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/access_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="À seulement 2 heures de Paris, Caen est le point de rayonnement parfait pour découvrir la Normandie ! Déplacez-vous en toute liberté grâce aux solutions de transports adaptées à vos possibilités : Bus, tram, train, vélos, navette électrique etc."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/car_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/item_background_selector"
+            app:layout_constraintTop_toBottomOf="@+id/description_2">
+
+            <View
+                android:id="@+id/car_view_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/car_view_vertical"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/primaryRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/car_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/car_title"
+                app:layout_constraintStart_toEndOf="@+id/car_view_vertical"
+                app:layout_constraintTop_toTopOf="@+id/car_title"
+                app:srcCompat="@drawable/ic_car" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="En voiture"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/open_car_icon"
+                app:layout_constraintStart_toEndOf="@+id/car_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/open_car_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/car_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/car_title"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <View
+                android:id="@+id/view_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/car_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="Le réseau routier de Caen la mer s’appuie sur un périphérique (27 km) et 16 échangeurs connectés à 3 autoroutes (A13-A84-A88) et 1 nationale (N13).)"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_title"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Autoroute A13 : Paris – Caen (240 km – 2h30)"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Autoroute A84 (gratuite) : Rennes – Caen (170 km – 1h30)"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_2"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Autoroute A28-A88 : Le Mans – Caen (165 km – 1h45)"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_3"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Nationale N13 : Cherbourg – Caen (130 km – 1h30)"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_4"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Temps de trajet en voiture :"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_5"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Le Havre : …………………………. 1h00"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_6"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Rouen : ……………………………… 1h30"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_7"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Le Mans ou Rennes : …….1h45"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_8"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Paris : ………………………………... 2h30"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_9"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Tours ou Angers : ……….... 2h30"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_10"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Chartres ou Amiens : …. 2h40"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_11"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="&#8226; Nantes : ……………………….…… 3h00"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_12"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/car_description_14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="&#8226; Lille : …………………………………… 3h45"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/car_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/car_description_13"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/item_background_selector"
+            app:layout_constraintTop_toBottomOf="@+id/car_layout">
+
+            <View
+                android:id="@+id/bus_view_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/bus_view_vertical"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/primaryRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bus_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/bus_title"
+                app:layout_constraintStart_toEndOf="@+id/bus_view_vertical"
+                app:layout_constraintTop_toTopOf="@+id/bus_title"
+                app:srcCompat="@drawable/ic_bus" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bus_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="En bus"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/open_bus_icon"
+                app:layout_constraintStart_toEndOf="@+id/bus_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/open_bus_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/bus_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bus_title"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <View
+                android:id="@+id/view_bus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bus_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bus_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="FLIXBUS et BlaBlaCar Bus proposent des trajets en bus depuis Paris et les grandes villes de France vers Caen et Ouistreham Riva-Bella"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/bus_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/bus_title"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/train_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/item_background_selector"
+            app:layout_constraintTop_toBottomOf="@+id/bus_layout">
+
+            <View
+                android:id="@+id/train_view_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/train_view_vertical"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/primaryRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/train_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/train_title"
+                app:layout_constraintStart_toEndOf="@+id/train_view_vertical"
+                app:layout_constraintTop_toTopOf="@+id/train_title"
+                app:srcCompat="@drawable/ic_train" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/train_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="En train"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/open_train_icon"
+                app:layout_constraintStart_toEndOf="@+id/train_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/open_train_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/train_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/train_title"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <View
+                android:id="@+id/view_train"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/train_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/train_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="Gare SNCF de Caen : 53 rue de la Gare – CAEN"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/train_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/train_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/train_description_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Liaison Paris Saint-Lazare/Caen en 2h (Ligne Paris /Cherbourg)."
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/train_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/train_description" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/train_description_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Tél. : 0800 801 801 (Service et appel gratuit) ou www.ter.sncf.com/normandie"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/train_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/train_description_2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/train_description_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Le nouveau train Omnéo, équipées du Wi-Fi, est mis en service sur la ligne Cherbourg-Caen-Paris"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/train_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/train_description_3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/train_description_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="Pour vous rendre en centre-ville de Caen en bus depuis la Gare SNCF : lignes tram T1,T2 et T3 – réseau twisto"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/train_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/train_description_4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/plane_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/item_background_selector"
+            app:layout_constraintTop_toBottomOf="@+id/train_layout">
+
+            <View
+                android:id="@+id/plane_view_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/plane_view_vertical"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/primaryRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/plane_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/plane_title"
+                app:layout_constraintStart_toEndOf="@+id/plane_view_vertical"
+                app:layout_constraintTop_toTopOf="@+id/plane_title"
+                app:srcCompat="@drawable/ic_airplane" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/plane_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="En avion"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/open_plane_icon"
+                app:layout_constraintStart_toEndOf="@+id/plane_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/open_plane_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/plane_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/plane_title"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <View
+                android:id="@+id/view_plane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plane_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/plane_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="Aéroport de Caen-Carpiquet : Route de Caumont – CARPIQUET"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/plane_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/plane_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/plane_description_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Tél : + 33 (0)2 31 71 20 10 – www.caen.aeroport.fr"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/plane_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/plane_description" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/plane_description_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="L’aéroport de Caen-Carpiquet, 1er aéroport de Normandie, se trouve à 10 minutes du centre de Caen.
+Une navette régulière, la ligne 3 du réseau twisto, relie le centre-ville de Caen toutes les 15 minutes.
+2 compagnies européennes sont présentes à l’aéroport : AIR FRANCE – VOLOTEA"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/plane_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/plane_description_2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/boat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/item_background_selector"
+            app:layout_constraintTop_toBottomOf="@+id/plane_layout">
+
+            <View
+                android:id="@+id/boat_view_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/boat_view_vertical"
+                android:layout_width="3dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/primaryRed"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/boat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/boat_title"
+                app:layout_constraintStart_toEndOf="@+id/boat_view_vertical"
+                app:layout_constraintTop_toTopOf="@+id/boat_title"
+                app:srcCompat="@drawable/ic_boat" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/boat_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="En bateau"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/open_boat_icon"
+                app:layout_constraintStart_toEndOf="@+id/boat_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/open_boat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/boat_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/boat_title"
+                app:srcCompat="@drawable/ic_open_circle" />
+
+            <View
+                android:id="@+id/view_boat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boat_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/boat_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:text="BRITTANY FERRIES : Avenue du Grand large – OUISTREHAM"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/boat_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/boat_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/boat_description_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:text="Tél. : 0(2) 98 24 47 01 – www.brittanyferries.fr"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/boat_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/boat_description" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/boat_description_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="Depuis la Gare maritime de Ouistreham, située à 15 minutes de Caen, la compagnie Britanny Ferries assure des liaisons quotidiennes entre Ouistreham et Portsmouth en Angleterre (durée traversée : 6h). Transfert vers Londres.
+
+Liaison Caen – Ouistreham en bus : ligne 12 et ligne « gare maritime express » – réseau twisto"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/boat_view_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/boat_description_2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
